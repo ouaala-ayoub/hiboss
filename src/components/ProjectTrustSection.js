@@ -20,7 +20,7 @@ const ProjectTrustSection = () => {
           <Text color="gray.500" fontSize="lg" mb={4}>
           Nous nous assurerons de trouver une solution à la fois satisfaisante et efficace.
           </Text>
-          <Link href="#" color={primary} fontWeight="bold" fontSize="lg">
+          <Link href="#contact" color={primary} fontWeight="bold" fontSize="lg">
             Contactez Nous &rarr;
           </Link>
         </Box>
