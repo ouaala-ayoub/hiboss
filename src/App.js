@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Box,  } from "@chakra-ui/react";
+import Header from "./components/Header";
+import {  primaryLight } from "./constants";
+import HomeComponent from "./components/Home";
+import Qualities from "./components/Qualities";
+import ExpertiseSection from "./components/Expertise";
+import ProjectTrustSection from "./components/ProjectTrustSection";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <Header/>
+      <HomeComponent  color={primaryLight} textColor={'black'} />
+      <Qualities/>
+      <ExpertiseSection/>
+      <ProjectTrustSection/>
+      <ContactForm/>
+      <Footer/>
+    </Box>
   );
 }
 
