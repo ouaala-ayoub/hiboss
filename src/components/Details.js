@@ -1,5 +1,5 @@
-import { Box, Flex, Text, VStack, SimpleGrid, Image, Divider, Stack } from "@chakra-ui/react";
-import { primary, primary2, secondary } from "../constants";
+import { Box, Flex, Text, VStack, Image, Divider, Stack } from "@chakra-ui/react";
+import { secondary } from "../constants";
 
 const qualities = [
   {
@@ -36,9 +36,14 @@ const qualities = [
 
 const QualitiesComponent = () => {
   return (
-    <Box w="70%" display="flex" justifyContent="center">
-      <Stack direction="row" spacing={10} divider={<Divider orientation="vertical" borderColor="gray.300" />}>
-        <VStack align="start" spacing={6}>
+    <Box w={{ base: "90%", md: "80%", lg: "70%" }} mx="auto" display="flex" justifyContent="center" py={8}>
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        spacing={{ base: 6, md: 10 }}
+        align="stretch"
+      >
+        {/* First half of qualities */}
+        <VStack align="start" spacing={6} flex="1">
           {qualities.slice(0, qualities.length / 2).map((quality, index) => (
             <Flex key={index} align="start">
               <Image src={quality.icon} boxSize={16} mr={4} />
@@ -46,7 +51,7 @@ const QualitiesComponent = () => {
                 <Text fontWeight="bold" fontSize="xl" color={secondary}>
                   {quality.title}
                 </Text>
-                <Text fontSize="md" fontWeight={'100'}>
+                <Text fontSize="md" fontWeight="100">
                   {quality.description}
                 </Text>
               </VStack>
@@ -54,7 +59,14 @@ const QualitiesComponent = () => {
           ))}
         </VStack>
 
-        <VStack align="start" spacing={6}>
+        {/* Divider */}
+        <Divider
+          orientation={{ base: "horizontal", md: "vertical" }}
+          borderColor="gray.300"
+        />
+
+        {/* Second half of qualities */}
+        <VStack align="start" spacing={6} flex="1">
           {qualities.slice(qualities.length / 2).map((quality, index) => (
             <Flex key={index} align="start">
               <Image src={quality.icon} boxSize={16} mr={4} />
@@ -62,7 +74,7 @@ const QualitiesComponent = () => {
                 <Text fontWeight="bold" fontSize="xl" color={secondary}>
                   {quality.title}
                 </Text>
-                <Text fontSize="md" fontWeight={'100'}>
+                <Text fontSize="md" fontWeight="100">
                   {quality.description}
                 </Text>
               </VStack>
