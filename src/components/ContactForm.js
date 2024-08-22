@@ -9,7 +9,7 @@ import {
   Textarea,
   Icon,
 } from "@chakra-ui/react";
-import { backgroundColor, secondary, secondary2 } from "../constants";
+import { backgroundColor, primary, secondary, secondary2 } from "../constants";
 import InformativeCard from "./InformativeCard";
 import { MdOutlineAlternateEmail , MdPhone ,MdLocationOn } from "react-icons/md";
 
@@ -29,7 +29,7 @@ const ContactForm = () => {
           Contactez-nous
         </Heading>
       </Flex>
-      <Text textAlign="center" mb={8} color={secondary2}>
+      <Text textAlign="center" mb={8} color={"#7e3c21"}>
         Entrez vos coordonnées, nous vous contacterons pour répondre à vos
         besoins.
       </Text>
@@ -61,7 +61,7 @@ const ContactForm = () => {
             <Text>Laissez un commentaire...</Text>
             <Textarea mb={4} size="lg" borderColor="gray.300" />
           </>
-          <Button colorScheme="orange" size="lg" w="100%">
+          <Button bg={secondary} size="lg" w="100%" color={'white'} _hover={{bg: secondary2}}>
             Envoyer
           </Button>
         </form>

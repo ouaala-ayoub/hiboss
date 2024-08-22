@@ -36,7 +36,7 @@ const ExpertiseSection = () => {
         Notre expertise
       </Heading>
       <Text
-        color={secondary2}
+        color={"#7e3c21"}
         mb={10}
         fontSize="md"
         w={{ base: "100%", md: "50%" }}
